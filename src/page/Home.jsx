@@ -208,7 +208,8 @@ const Home = () => {
   const fetchEditions = async (currentPage) => {
     try {
       const response = await axios.get(
-        `http://localhost:8000/api/editions/?page=${currentPage}`
+        // `http://localhost:8000/api/editions/?page=${currentPage}`
+        `https://spns-magazine.onrender.com/api/editions/?page=${currentPage}`
       );
       // Append new editions to the existing list
       setEditions((prevEditions) => [...prevEditions, ...response.data.results]);

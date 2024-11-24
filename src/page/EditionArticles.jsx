@@ -252,7 +252,8 @@ const EditionArticles = () => {
   useEffect(() => {
     const fetchArticles = async () => {
       try {
-        const response = await axios.get(`http://127.0.0.1:8000/api/editions/${id}/articles/`);
+        // const response = await axios.get(`http://127.0.0.1:8000/api/editions/${id}/articles/`);
+        const response = await axios.get(`https://spns-magazine.onrender.com/api/editions/${id}/articles/`);
         console.log("API Response:", response.data); // Debugging
         setArticles(response.data.results || response.data);
         setNextPage(response.data.next);
