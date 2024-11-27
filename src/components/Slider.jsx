@@ -6,7 +6,7 @@ const Slider = () => {
     {
       id: 1,
       image: slide1,
-      title: "Welcome to SPNS MAGAZINE",
+      title: "Welcome to BPPR MAGAZINE",
       description: "A PUBLICATION OF SPNS RESEARCH DESK.",
     },
     {
@@ -69,7 +69,7 @@ const Slider = () => {
         </p>
         <a
           href="/articles"
-          className="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded text-lg"
+          className="bg-[#b3976b] hover:bg-[#b3976b] text-white py-2 px-4 rounded text-lg"
         >
           View articles
         </a>
@@ -97,7 +97,7 @@ const Slider = () => {
             onClick={() => setCurrentIndex(index)}
             className={`w-3 h-3 rounded-full cursor-pointer ${
               currentIndex === index
-                ? "bg-blue-500"
+                ? "bg-[#b3976b]"
                 : "bg-white bg-opacity-50"
             }`}
           ></div>

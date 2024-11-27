@@ -7,6 +7,7 @@ import ArticleDetail from './page/ArticleDetail';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Articles from './page/Articles';
+import ContributorCards from './page/ContributorCards';
 
 
 
@@ -19,6 +20,7 @@ function App() {
         <Route path="/editions/:id/articles" element={<EditionArticles/>} />
         <Route path="/articles/:id" element={<ArticleDetail/>} />
         <Route path="/articles" element={<Articles/>} />
+        <Route path="/editors" element={<ContributorCards/>} />
       </Routes>
       <Footer/>
     </>

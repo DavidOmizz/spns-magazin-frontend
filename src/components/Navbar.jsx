@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import logo from "../images/Group 5.png";
+import SearchComponent from "./SearchComponent";
+
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -43,19 +46,30 @@ const Navbar = () => {
       <div className="container mx-auto px-6 md:px-5 py-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <div className="flex items-center">
+          {/* <div className="flex items-center">
             <h2 className="font-bold text-[30px]">BP<span className="text-[#b3976b]">PR</span></h2>
+          </div> */}
+          <div className="flex items-center">
+            <Link to="/">
+              <img src={logo} alt="Logo Image" className="w-28 h-14 mr-2" />
+            </Link>
+            {/* <h2 className="font-bold text-[30px]">BP<span className="text-[#b3976b]">PR</span></h2> */}
           </div>
+
 
           {/* Desktop Links */}
           <div className="hidden md:flex flex-grow justify-center space-x-8">
             <ul className="flex space-x-8 gap-8" color="color.main">
-              <li className="hover:text-blue-500 cursor-pointer"><Link to='/'>Editions</Link></li>
-              <li className="hover:text-blue-500 cursor-pointer"><Link to='/articles'>Articles</Link></li>
+              <li className="hover:text-[#b3976b] cursor-pointer"><Link to='/'>Editions</Link></li>
+              <li className="hover:text-[#b3976b] cursor-pointer"><Link to='/articles'>Articles</Link></li>
+              <li className="hover:text-[#b3976b] cursor-pointer"><Link to='/editors'>Editors</Link></li>
               {/* <li className="hover:text-blue-500 cursor-pointer"><Link to='/'>Contact</Link></li> */}
               {/* <li className="hover:text-blue-500 cursor-pointer">Contact</li> */}
             </ul>
           </div>
+
+          {/* Search Component */}
+          {/* <SearchComponent/> */}
 
           {/* Hamburger Menu Icon for Mobile */}
           <div className="md:hidden">
@@ -85,8 +99,9 @@ const Navbar = () => {
 
           {/* Mobile Links */}
           <ul className="mt-8 space-y-4 px-6">
-            <li onClick={handleLinkClick}  className="hover:text-blue-500 cursor-pointer"><Link to='/'>Editions</Link></li>
-            <li onClick={handleLinkClick} className="hover:text-blue-500 cursor-pointer"><Link to='/articles'>About</Link></li>
+            <li onClick={handleLinkClick}  className="hover:text-[#b3976b] cursor-pointer"><Link to='/'>Editions</Link></li>
+            <li onClick={handleLinkClick} className="hover:text-[#b3976b] cursor-pointer"><Link to='/articles'>About</Link></li>
+            <li onClick={handleLinkClick} className="hover:text-[#b3976b] cursor-pointer"><Link to='/editors'>Editors</Link></li>
             {/* <li onClick={handleLinkClick} className="hover:text-blue-500 cursor-pointer"><Link to='/contact'>Contact</Link></li> */}
             {/* <li onClick={handleLinkClick} className="hover:text-blue-500 cursor-pointer">Contact</li> */}
           </ul>

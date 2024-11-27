@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import RequestPDFForm from "../components/RequestPDFForm";
 
 const ArticleDetail = () => {
   const { id } = useParams(); // Get article ID from the URL
   const [article, setArticle] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const [formVisible, setFormVisible] = useState(false);
 
   useEffect(() => {
     const fetchArticle = async () => {
@@ -46,15 +48,19 @@ const ArticleDetail = () => {
         </div>
 
         {/* Article Title */}
-        <h1 className="text-5xl font-bold text-gray-800 mb-4">{article.title}</h1>
+        <h1 className="text-2xl font-bold text-gray-800 mb-4">{article.title}</h1>
       </div>
 
       {/* Article Description */}
-      <p className="text-lg text-gray-600 mb-6">
+      {/* <p className="text-lg text-gray-600 mb-6">
         {article.content || "No description available."}
-      </p>
+      </p> */}
+      <p
+        className="text-lg text-gray-600 mb-6 text-center"
+        dangerouslySetInnerHTML={{ __html: article.content || "No description available." }}
+      ></p>
 
-      {/* Download PDF Button */}
+      {/* Download PDF Button
       {article.pdf_file && (
         <div className="flex justify-center mt-8">
           <a
@@ -65,6 +71,21 @@ const ArticleDetail = () => {
           >
             Download PDF
           </a>
+        </div>
+      )} */}
+
+      {/* Download PDF Section */}
+      {article.pdf_file && (
+        <div className="flex flex-col justify-center items-center mt-8">
+          <button
+            onClick={() => setFormVisible(!formVisible)}
+            className="bg-[#b3976b] text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-[#724f17] transition duration-300"
+          >
+            Request PDF
+          </button>
+          {formVisible && (
+            <RequestPDFForm articleId={id} onSuccess={() => setFormVisible(false)} />
+          )}
         </div>
       )}
     </div>

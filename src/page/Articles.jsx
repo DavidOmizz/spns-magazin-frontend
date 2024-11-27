@@ -73,12 +73,15 @@ const Articles = () => {
                 {/* Article content */}
                 <div className="p-4">
                   <h2 className="text-xl font-semibold text-gray-700 mb-2">{article.title}</h2>
-                  <p className="text-sm text-gray-500 mb-4 font-bold">
-                    Editor: {article.contributor?.full_name || "No description available."}
+                  <p className="text-sm text-gray-500">
+                    <span className="font-bold">Editor:</span>{article.contributor?.full_name || "No description available."}
+                  </p>
+                  <p className="text-sm text-gray-500 mb-4">
+                    Industry: {article.industry_display  || "No industry available."}
                   </p>
                   <Link
                     to={`/articles/${article.id}`}
-                    className="text-blue-500 underline hover:text-blue-700"
+                    className="text-[#b3976b] underline hover:text-[#b3976b]"
                   >
                     View Article Details
                   </Link>

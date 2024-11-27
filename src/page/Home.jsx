@@ -277,16 +277,20 @@ const Home = () => {
                     <strong>Publication Date:</strong> {edition.release_date}
                   </p>
                   <div className="mt-4">
-                    <a
+                    {/* <a
                       href={edition.pdf_file}
                       className="block text-blue-500 underline hover:text-blue-700"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       Download All Articles
-                    </a>
+                    </a> */}
                     <button
-                      onClick={() => navigate(`/editions/${edition.id}/articles`)}
+                      onClick={() => 
+                        navigate(`/editions/${edition.id}/articles`, {
+                          state: { description: edition.description }, // Pass the description as state
+                        })
+                      }
                       className="mt-2 bg-[#b3976b] text-white px-4 py-2 rounded hover:bg-[#b3976b] transition"
                     >
                       View All Articles
