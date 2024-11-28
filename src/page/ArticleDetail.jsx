@@ -40,7 +40,7 @@ const ArticleDetail = () => {
             <img
               src={article.image} // Assuming article.image is the image URL
               alt={article.title}
-              className="w-full h-72 object-cover rounded-lg shadow-md"
+              className="w-full h-80 object-cover rounded-lg shadow-md"
             />
           ) : (
             <span className="text-gray-400">Image Placeholder</span>
