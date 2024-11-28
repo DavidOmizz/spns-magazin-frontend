@@ -24,7 +24,7 @@ const RequestEditionForm = ({ editionId, onSuccess }) => {
     try {
       const response = await fetch(
         // `http://127.0.0.1:8000/api/editions/${editionId}/request_pdf/`, // Update the URL to match your API
-        `https://spns-magazine.onrender.com/api/editions/${editionId}/request_pdf/`, // Update the URL to match your API
+        `https://spns-magazine-backend.onrender.com/api/editions/${editionId}/request_pdf/`, // Update the URL to match your API
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

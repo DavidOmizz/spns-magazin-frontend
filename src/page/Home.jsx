@@ -209,10 +209,20 @@ const Home = () => {
     try {
       const response = await axios.get(
         // `http://localhost:8000/api/editions/?page=${currentPage}`
-        `https://spns-magazine.onrender.com/api/editions/?page=${currentPage}`
+        `https://spns-magazine-backend.onrender.com/api/editions/?page=${currentPage}`
       );
       // Append new editions to the existing list
-      setEditions((prevEditions) => [...prevEditions, ...response.data.results]);
+      // setEditions((prevEditions) => [...prevEditions, ...response.data.results]);
+      setEditions((prevEditions) => {
+        const newEditions = response.data.results;
+        const uniqueEditions = [
+          ...prevEditions,
+          ...newEditions.filter(
+            (edition) => !prevEditions.some((e) => e.id === edition.id)
+          ),
+        ];
+        return uniqueEditions;
+      });
 
       // Check if there are more pages
       setHasMore(response.data.next !== null);
@@ -224,6 +234,7 @@ const Home = () => {
   };
 
   useEffect(() => {
+    console.log("Fetching page:", page);
     fetchEditions(page);
   }, [page]);
 

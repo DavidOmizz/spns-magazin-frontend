@@ -16,7 +16,7 @@ const SearchComponent = () => {
     try {
       // Dynamic endpoint based on search type
     //   const url = `http://127.0.0.1:8000/api/${searchType}/?search=${searchTerm}`;
-      const url = `https://spns-magazine.onrender.com/api/${searchType}/?search=${searchTerm}`;
+      const url = `https://spns-magazine-backend.onrender.com/api/${searchType}/?search=${searchTerm}`;
       const response = await axios.get(url);
       setResults(response.data); // Populate results
     } catch (error) {

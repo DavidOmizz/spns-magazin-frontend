@@ -24,7 +24,7 @@ const RequestPDFForm = ({ articleId, onSuccess }) => {
     try {
       const response = await fetch(
         // `http://127.0.0.1:8000/api/articles/${articleId}/request_pdf/`,
-        `https://spns-magazine.onrender.com/api/articles/${articleId}/request_pdf/`,
+        `https://spns-magazine-backend.onrender.com/api/articles/${articleId}/request_pdf/`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

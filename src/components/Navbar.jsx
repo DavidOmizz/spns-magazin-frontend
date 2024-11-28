@@ -100,7 +100,7 @@ const Navbar = () => {
           {/* Mobile Links */}
           <ul className="mt-8 space-y-4 px-6">
             <li onClick={handleLinkClick}  className="hover:text-[#b3976b] cursor-pointer"><Link to='/'>Editions</Link></li>
-            <li onClick={handleLinkClick} className="hover:text-[#b3976b] cursor-pointer"><Link to='/articles'>About</Link></li>
+            <li onClick={handleLinkClick} className="hover:text-[#b3976b] cursor-pointer"><Link to='/articles'>Articles</Link></li>
             <li onClick={handleLinkClick} className="hover:text-[#b3976b] cursor-pointer"><Link to='/editors'>Editors</Link></li>
             {/* <li onClick={handleLinkClick} className="hover:text-blue-500 cursor-pointer"><Link to='/contact'>Contact</Link></li> */}
             {/* <li onClick={handleLinkClick} className="hover:text-blue-500 cursor-pointer">Contact</li> */}
