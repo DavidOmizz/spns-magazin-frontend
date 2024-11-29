@@ -13,8 +13,8 @@ const ArticleDetail = () => {
   useEffect(() => {
     const fetchArticle = async () => {
       try {
-        // const response = await axios.get(`http://127.0.0.1:8000/api/articles/${id}/`);
-        const response = await axios.get(`https://spns-magazine-backend.onrender.com/api/articles/${id}/`);
+        const response = await axios.get(`http://127.0.0.1:8000/api/articles/${id}/`);
+        // const response = await axios.get(`https://spns-magazine-backend.onrender.com/api/articles/${id}/`);
         setArticle(response.data);
       } catch (err) {
         setError("Failed to fetch article. Please try again later.");

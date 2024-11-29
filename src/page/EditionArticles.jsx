@@ -355,8 +355,8 @@ const EditionArticles = () => {
     const fetchArticles = async () => {
       try {
         // const response = await axios.get(`http://127.0.0.1:8000/api/editions/${id}/articles/`);
-        // const response = await axios.get(`http://127.0.0.1:8000/api/editions/${id}/articles/`);
-        const response = await axios.get(`https://spns-magazine-backend.onrender.com/api/editions/${id}/articles/`);
+        const response = await axios.get(`http://127.0.0.1:8000/api/editions/${id}/articles/`);
+        // const response = await axios.get(`https://spns-magazine-backend.onrender.com/api/editions/${id}/articles/`);
         setArticles(response.data);
       } catch (err) {
         setError("Failed to fetch articles. Please try again later.");

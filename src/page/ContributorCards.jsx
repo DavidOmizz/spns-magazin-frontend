@@ -6,8 +6,8 @@ const ContributorCards = () => {
   const [selectedContributor, setSelectedContributor] = useState(null); // Contributor for the modal
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
-  // const [currentPage, setCurrentPage] = useState("http://127.0.0.1:8000/api/contributors/");
-  const [currentPage, setCurrentPage] = useState("https://spns-magazine-backend.onrender.com/api/contributors/");
+  const [currentPage, setCurrentPage] = useState("http://127.0.0.1:8000/api/contributors/");
+  // const [currentPage, setCurrentPage] = useState("https://spns-magazine-backend.onrender.com/api/contributors/");
   const [pagination, setPagination] = useState({ next: null, previous: null });
 
   useEffect(() => {
