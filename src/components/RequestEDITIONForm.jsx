@@ -49,7 +49,7 @@ const RequestEditionForm = ({ editionId, onSuccess }) => {
   };
 
   return (
-    <div className="mt-6">
+    <div className="mt-6 mb-6">
       <form onSubmit={handleSubmit} className="space-y-4 w-[30%] mx-auto">
         <div>
           <label className="block text-gray-700">Name:</label>

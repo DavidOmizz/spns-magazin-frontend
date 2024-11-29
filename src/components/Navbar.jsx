@@ -60,6 +60,7 @@ const Navbar = () => {
           {/* Desktop Links */}
           <div className="hidden md:flex flex-grow justify-center space-x-8">
             <ul className="flex space-x-8 gap-8" color="color.main">
+              <li className="hover:text-[#b3976b] cursor-pointer"><Link to='/aboutus'>About Us</Link></li>
               <li className="hover:text-[#b3976b] cursor-pointer"><Link to='/'>Editions</Link></li>
               <li className="hover:text-[#b3976b] cursor-pointer"><Link to='/articles'>Articles</Link></li>
               <li className="hover:text-[#b3976b] cursor-pointer"><Link to='/editors'>Editors</Link></li>
@@ -100,6 +101,7 @@ const Navbar = () => {
           {/* Mobile Links */}
           <ul className="mt-8 space-y-4 px-6">
             <li onClick={handleLinkClick}  className="hover:text-[#b3976b] cursor-pointer"><Link to='/'>Editions</Link></li>
+            <li onClick={handleLinkClick} className="hover:text-[#b3976b] cursor-pointer"><Link to='/aboutus'>About Us</Link></li>
             <li onClick={handleLinkClick} className="hover:text-[#b3976b] cursor-pointer"><Link to='/articles'>Articles</Link></li>
             <li onClick={handleLinkClick} className="hover:text-[#b3976b] cursor-pointer"><Link to='/editors'>Editors</Link></li>
             {/* <li onClick={handleLinkClick} className="hover:text-blue-500 cursor-pointer"><Link to='/contact'>Contact</Link></li> */}

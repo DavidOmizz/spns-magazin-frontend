@@ -9,6 +9,7 @@ import Footer from './components/Footer';
 import Articles from './page/Articles';
 import ContributorCards from './page/ContributorCards';
 import NotFound from './page/NotFound';
+import AboutUs from './page/AboutUs';
 
 
 
@@ -22,6 +23,7 @@ function App() {
         <Route path="/articles/:id" element={<ArticleDetail/>} />
         <Route path="/articles" element={<Articles/>} />
         <Route path="/editors" element={<ContributorCards/>} />
+        <Route path="/aboutus" element={<AboutUs/>} />
         <Route path="*" element={<NotFound/>} />
       </Routes>
       <Footer/>

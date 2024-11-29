@@ -14,8 +14,8 @@ const Articles = () => {
     const fetchArticles = async () => {
       try {
         setLoading(true);
-        const response = await axios.get(`http://127.0.0.1:8000/api/articles/?page=${currentPage}`);
-        // const response = await axios.get(`https://spns-magazine-backend.onrender.com/api/articles/?page=${currentPage}`);
+        // const response = await axios.get(`http://127.0.0.1:8000/api/articles/?page=${currentPage}`);
+        const response = await axios.get(`https://spns-magazine-backend.onrender.com/api/articles/?page=${currentPage}`);
         setArticles(response.data.results); // Assuming `results` contains paginated data
         setHasNextPage(!!response.data.next); // `next` contains the next page URL or is null
         setHasPreviousPage(!!response.data.previous); // `previous` contains the previous page URL or is null
